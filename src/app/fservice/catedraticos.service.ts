@@ -18,7 +18,7 @@ export class CatedraticoService {
     constructor(private http:HttpClient) { }
     //metodos que se enlazan con el back 
     getCatedraticos():Observable<any>{
-      return this.http.get(`${this.baseUrl}`+'listarCatedratico');
+      return this.http.get(`${this.baseUrl}`+'listarTodosCatedraticos');
     }
     createCatedraticos(catedratico:object):Observable<object>{
       return this.http.post(`${this.baseUrl}'+'crearCatedraticos`,catedratico);
