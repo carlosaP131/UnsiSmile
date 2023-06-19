@@ -15,7 +15,7 @@ export class AlumnosService {
   constructor(private http:HttpClient) { }
 
   getAllAlumno(): Observable<any> {
-    return this.http.get(`${this.baseUrl1}`+ 'obtenerTodosAlumno');
+    return this.http.get(`${this.baseUrl1}`+ 'obtenerTodosAlumnos');
   }
 
   createAlumno(alumno: object): Observable<object>{
