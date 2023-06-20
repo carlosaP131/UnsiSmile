@@ -25,7 +25,7 @@ export class CatedraticosComponent implements OnInit{
   }
 
   getCatedraticos(): void {
-    console.log('ingresnado')
+    console.log('ingresnado==============>>>>>>>>>>><')
     this.service.getCatedraticos()
     .subscribe(
       data =>{
