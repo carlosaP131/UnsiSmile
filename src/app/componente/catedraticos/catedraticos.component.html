@@ -1,1 +1,42 @@
 <p>catedraticos works!</p>
+<i class="bi bi-star-fill text-success"></i>
+
+<div class="card-body">
+    <div class="panel-body">
+        <table class="table table-hover table-sm">
+            <thead class="thead-light">
+                <tr>
+                    <th>Id</th>
+                    <th>Nombre</th>
+                    <th>Segundo nombre</th>
+                    <th>Apellido Paterno</th>
+                    <th>Apellido Materno</th>
+                    <th>CURP</th>
+                    <th>Teléfono</th>
+                    <th>Sexo</th>
+                    <th>Fecha de nacimiento</th>
+                    <th>No. Trabajador</th>
+                    <th>Email</th>
+                    <th>Estatus</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let catedraticos of listaCatedratico">
+                    <td>{{catedraticos.idCatedratico}}</td>
+                    <td>{{catedraticos.nombre}}</td>
+                    <td>{{catedraticos.nombre2}}</td>
+                    <td>{{catedraticos.apellido}}</td>
+                    <td>{{catedraticos.apellido2}}</td>
+                    <td>{{catedraticos.curp}}</td>
+                    <td>{{catedraticos.telefono}}</td>
+                    <td>{{catedraticos.sexo}}</td>
+                    <td>{{catedraticos.fechaNacimiento}}</td>
+                    <td>{{catedraticos.numeroTrabajador}}</td>
+                    <td>{{catedraticos.emailCatedratico}}</td>
+                    <td>{{catedraticos.estatus}}</td>
+                  
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>
