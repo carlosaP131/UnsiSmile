@@ -1,3 +1,9 @@
+/**
+ * Autores: Carlos Aurelio Alcantara Perez, Baldomero Sainos Hernandez
+ * Fecha de creacion: 14/06/23
+ * Fecha de modificacion: 15/06/23
+ * Comentarios: Este es el service de catedratico contendra el crud de catedratico
+ */
 import{ HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { Observable } from 'rxjs';
