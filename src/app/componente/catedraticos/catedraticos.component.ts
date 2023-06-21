@@ -37,5 +37,11 @@ export class CatedraticosComponent implements OnInit{
       }
     )
   }
+
+  delete(idCatedratico: Number){
+    console.log('-------------------->>>')
+    this.service.deleteCatedraticos(idCatedratico);
+    this.getCatedraticos();
+  }
 }
 

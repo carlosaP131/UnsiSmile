@@ -36,7 +36,7 @@
                     <td>{{catedraticos.numeroTrabajador}}</td>
                     <td>{{catedraticos.emailCatedratico}}</td>
                     <td>{{catedraticos.estatus}}</td>
-                    <td> <button class="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                    <td> <button (click)="delete(catedraticos.idCatedratico)" class="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
                         Eliminar
                       </button></td>
                       <td> <button class="bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
