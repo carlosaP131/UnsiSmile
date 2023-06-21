@@ -17,6 +17,7 @@ export class AdministradoresComponent implements OnInit{
   }
 
   getAdministradores(): void {
+    console.log('listando')
     this.service.getAdministradores()
     .subscribe(
       data => {

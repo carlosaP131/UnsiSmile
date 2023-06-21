@@ -1,34 +1,43 @@
-<p>administradores works!</p>
-
-<div class="card-body">
-    <div class="panel-body">
-        <table class="table table-hover table-sm">
-            <thead class="thead-light">
-                <tr>
-                    <th>Nombre</th>
-                    <th>Segundo Nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>Curp</th>
-                    <th>Telefono</th>
-                    <th>Numero de trabajador</th>
-                    <th>Fecha de nacimiento</th>
-                    <th>Sexo</th>
-                    <th>Email</th>
-            </thead>
-            <tbody>
-                <tr *ngFor="let registro of listarTodosAdministradores">
-                    <td>{{registro.nombre1}}</td>
-                    <td>{{registro.nombre2}}</td>
-                    <td>{{registro.apellido1}}</td>
-                    <td>{{registro.apellido2}}</td>
-                    <td>{{registro.curp}}</td>
-                    <td>{{registro.telefono}}</td>
-                    <td>{{registro.numeroTrabajador}}</td>
-                    <td>{{registro.fechaNacimiento}}</td>
-                    <td>{{registro.emailAdmin}}</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="container-fluid">
+    <div class="row">
+      <div class="col-sm-2" style="background-color:rgb(101, 209, 255);"></div>
+      <div class="col-sm-10" style="background-color:rgb(255, 255, 255);"><div class="card-body">
+        <div class="panel-body">
+            <table class="table table-hover table-sm">
+                <thead class="thead-light">
+                    <tr>
+                        <th>Nombre</th>
+                        <th>Segundo Nombre</th>
+                        <th>Apellido Paterno</th>
+                        <th>Apellido Materno</th>
+                        <th>Curp</th>
+                        <th>Telefono</th>
+                        <th>Numero de trabajador</th>
+                        <th>Fecha de nacimiento</th>
+                        <th>Sexo</th>
+                        <th>Email</th>
+                </thead>
+                <tbody>
+                    <tr *ngFor="let registro of listarTodosAdministradores">
+                        <td>{{registro.nombre1}}</td>
+                        <td>{{registro.nombre2}}</td>
+                        <td>{{registro.apellido1}}</td>
+                        <td>{{registro.apellido2}}</td>
+                        <td>{{registro.curp}}</td>
+                        <td>{{registro.telefono}}</td>
+                        <td>{{registro.numeroTrabajador}}</td>
+                        <td>{{registro.fechaNacimiento}}</td>
+                        <td>{{registro.sexo}}</td>                  
+                        <td>{{registro.emailAdmin}}</td>
+                        <td>
+                            <button>Eliminar</button>
+                            <button>Actualizar</button>
+                        </td>
+                    </tr>
+                </tbody>
+            </table>
+        </div>
     </div>
-</div>
+    </div>
+    </div>
+  </div>

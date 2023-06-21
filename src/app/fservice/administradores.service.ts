@@ -10,7 +10,7 @@ export class AdministradoresService {
   constructor(private http:HttpClient) { }
 
   getAdministradores(): Observable<any> {
-    return this.http.get('${this.baseUrl}'+'listarTodosAdministradores');
+    return this.http.get(`${this.baseUrl}`+'listarTodosAdministradores');
   }
   createAdministrador(administradores: object): Observable<object> {
     return this.http.get('${this.baseUrl}'+'crearAdministrador');
