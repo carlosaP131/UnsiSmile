@@ -38,10 +38,10 @@ export class CatedraticosComponent implements OnInit{
     )
   }
 
-  delete(idCatedratico: Number){
-    console.log('-------------------->>>')
+  deleteCatedraticos(idCatedratico: Number){
+    //console.log('-------------------->>>')
     this.service.deleteCatedraticos(idCatedratico);
-    this.getCatedraticos();
+    //this.ngOnInit();
   }
 }
 
