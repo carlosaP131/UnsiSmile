@@ -31,6 +31,12 @@ export class AlumnosComponent implements OnInit {
       )
   }
 
+  delete(id_alumnoAux: Number){
+    console.log('-------------------->>>')
+    this.service.deleteAlumno(id_alumnoAux);
+    this.getAllAlumno();
+  }
+  
 
 }
 

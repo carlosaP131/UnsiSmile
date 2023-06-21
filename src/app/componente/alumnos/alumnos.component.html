@@ -36,7 +36,8 @@
                             <td>{{alumnos.emailAlumno}}</td>
                             <td>{{alumnos.estatus}}</td>
                             <td>
-                                <button>Eliminar</button>
+                                <button (click)="delete(alumnos.idAlumno)" >
+                                    Eliminar</button>
                                 <button>Actualizar</button>
                             </td>
                         </tr>
