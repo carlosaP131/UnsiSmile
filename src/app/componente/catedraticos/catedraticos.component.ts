@@ -25,7 +25,7 @@ export class CatedraticosComponent implements OnInit{
   }
 
   getCatedraticos(): void {
-    console.log('ingresnado')
+    console.log('ingresnado==============>>>>>>>>>>><')
     this.service.getCatedraticos()
     .subscribe(
       data =>{
@@ -36,6 +36,12 @@ export class CatedraticosComponent implements OnInit{
         console.log(error)
       }
     )
+  }
+
+  delete(idCatedratico: Number){
+    console.log('-------------------->>>')
+    this.service.deleteCatedraticos(idCatedratico);
+    this.getCatedraticos();
   }
 }
 

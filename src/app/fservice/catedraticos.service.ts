@@ -23,8 +23,13 @@ export class CatedraticoService {
     createCatedraticos(catedratico:object):Observable<object>{
       return this.http.post(`${this.baseUrl}'+'crearCatedraticos`,catedratico);
     }
-    deleteCatedraticos(id:number):Observable<any>{
-      return this.http.delete(`${this.baseUrl}eliminarCatedraticos/${id}`,{responseType:'text'})
+    deleteCatedraticos(id_catedratico:Number):Observable<any>{
+      alert('llegando: '+ id_catedratico)
+      alert(`${this.baseUrl}eliminarCatedraticos/${id_catedratico}`)
+      //return this.http.delete(`${this.baseUrl}`+`eliminarCatedraticos/{id_catedratico}`)
+        
+        return this.http.delete(`${this.baseUrl}eliminarCatedraticos/${id_catedratico}`, { responseType: 'text' });  
+      
     }
     getCatedraticosId(id:number):Observable<object>{
       return this.http.get(`${this.baseUrl}/obtenerCatedratico/${id}`)
