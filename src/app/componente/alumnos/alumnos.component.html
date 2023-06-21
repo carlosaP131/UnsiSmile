@@ -1,36 +1,43 @@
-<div class="card-alumno">
-    <div class="panel1-body">
-        <table class="table table-hover table-sm">
-            <thead class="thead-light">
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Nombre2</th>
-                    <th>Apellido</th>
-                    <th>Apellido2</th>
-                    <th>sexo</th>
-                    <th>CURP</th>
-                    <th>Matricula</th>
-                    <th>Telefono</th>
-                    <th>Email</th>
-                    <th>Status</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let alumnos of listaALumnos">
-                    <td>{{alumnos.idAlumno}}</td>
-                    <td>{{alumnos.nombre}}</td>
-                    <td>{{alumnos.nombre2}}</td>
-                    <td>{{alumnos.apellido}}</td>
-                    <td>{{alumnos.apellido2}}</td>
-                    <td>{{alumnos.sexo}}</td>
-                    <td>{{alumnos.curp}}</td>
-                    <td>{{alumnos.matricula}}</td>
-                    <td>{{alumnos.telefono}}</td>
-                    <td>{{alumnos.emailAlumno}}</td>
-                    <td>{{alumnos.estatus}}</td>
-                </tr>
-            </tbody>
-        </table>
+<div class="row">
+    <div class="col-2"></div>
+    <div class="col-10">
+        <div class="card-alumno">
+            <div class="panel1-body">
+                <table class="table table-hover table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Nombre2</th>
+                            <th>Apellido</th>
+                            <th>Apellido2</th>
+                            <th>sexo</th>
+                            <th>CURP</th>
+                            <th>Matricula</th>
+                            <th>Telefono</th>
+                            <th>Email</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let alumnos of listaALumnos">
+                            <td>{{alumnos.idAlumno}}</td>
+                            <td>{{alumnos.nombre}}</td>
+                            <td>{{alumnos.nombre2}}</td>
+                            <td>{{alumnos.apellido}}</td>
+                            <td>{{alumnos.apellido2}}</td>
+                            <td>{{alumnos.sexo}}</td>
+                            <td>{{alumnos.curp}}</td>
+                            <td>{{alumnos.matricula}}</td>
+                            <td>{{alumnos.telefono}}</td>
+                            <td>{{alumnos.emailAlumno}}</td>
+                            <td>{{alumnos.estatus}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
     </div>
+
 </div>
+
