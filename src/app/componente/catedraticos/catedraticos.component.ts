@@ -16,6 +16,7 @@ import { CatedraticoService } from 'src/app/fservice/catedraticos.service';
 export class CatedraticosComponent implements OnInit{
   //Crear la lista para almacenar los datos del catedratico
   listaCatedratico: Catedratico[] = []
+  catedratico = new Catedratico();
   constructor(private service:CatedraticoService){
   }
 
@@ -46,6 +47,9 @@ export class CatedraticosComponent implements OnInit{
     });
     console.log('Registro eliminado')
    
+  }
+  crearCatedratico(): void{
+   // this.crearCatedratico(this.catedratico)
   }
 }
 
