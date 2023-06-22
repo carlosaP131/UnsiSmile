@@ -29,6 +29,13 @@ export class AdministradoresComponent implements OnInit{
       }
     )
   }
+  delete(id_admin: Number){
+    console.log('eliminando...-------------------->>>')
+    this.service.deleteAdministrador(id_admin)
+      .subscribe(() => {
+        this.getAdministradores();
+      });
+  }
 
 }
 

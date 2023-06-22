@@ -16,8 +16,9 @@ export class AdministradoresService {
     return this.http.get('${this.baseUrl}'+'crearAdministrador');
   }
 
-  deleteAdministrador(id_admin: Number): Observable<any> {  
-    return this.http.delete(`${this.baseUrl}eliminarAdministrador/${id_admin}`, { responseType: 'text' });  
+  deleteAdministrador(id_admin: any): Observable<any> {  
+    alert(`${this.baseUrl}eliminarAdministrador/${id_admin}`)
+    return this.http.delete(`${this.baseUrl}eliminarAdministrador/${id_admin}`);  
   }  
   
   getAdministradorId(idAdministrador: Number): Observable<Object> {  

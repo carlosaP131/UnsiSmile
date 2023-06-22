@@ -30,7 +30,7 @@
                         <td>{{registro.sexo}}</td>                  
                         <td>{{registro.emailAdmin}}</td>
                         <td>
-                            <button>Eliminar</button>
+                            <button (click)="delete(registro.idAdministrador)">Eliminar</button>
                             <button>Actualizar</button>
                         </td>
                     </tr>
