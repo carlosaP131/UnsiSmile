@@ -1,51 +1,98 @@
 <p>catedraticos works!</p>
 <i class="bi bi-star-fill text-success"></i>
 
-<div class="card-body">
-    <div class="panel-body">
-        <table class="table table-hover table-sm">
-            <thead class="thead-light">
-                <tr>
-                    <th>Id</th>
-                    <th>Nombre</th>
-                    <th>Segundo nombre</th>
-                    <th>Apellido Paterno</th>
-                    <th>Apellido Materno</th>
-                    <th>CURP</th>
-                    <th>Teléfono</th>
-                    <th>Sexo</th>
-                    <th>Fecha de nacimiento</th>
-                    <th>No. Trabajador</th>
-                    <th>Email</th>
-                    <th>Estatus</th>
-                    <th>Eliminar</th>
-                    <th>Actualizar</th>
-                </tr>
-            </thead>
-            <tbody>
-                <tr *ngFor="let catedraticos of listaCatedratico">
-                    <td>{{catedraticos.idCatedratico}}</td>
-                    <td>{{catedraticos.nombre}}</td>
-                    <td>{{catedraticos.nombre2}}</td>
-                    <td>{{catedraticos.apellido}}</td>
-                    <td>{{catedraticos.apellido2}}</td>
-                    <td>{{catedraticos.curp}}</td>
-                    <td>{{catedraticos.telefono}}</td>
-                    <td>{{catedraticos.sexo}}</td>
-                    <td>{{catedraticos.fechaNacimiento}}</td>
-                    <td>{{catedraticos.numeroTrabajador}}</td>
-                    <td>{{catedraticos.emailCatedratico}}</td>
-                    <td>{{catedraticos.estatus}}</td>
-                    <td> <button (click)="deleteCatedraticos(catedraticos.idCatedratico)" class="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                        Eliminar
-                      </button></td>
-                      <td> <button class="bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                        Actualizar
-                      </button></td>
-                </tr>
-            </tbody>
-        </table>
-        
-        
+<div class="row">
+    <div class="col-2">
+
     </div>
+    <div class="col-10">
+        <div class="card-body">
+            <div class="panel-body">
+                <table class="table table-hover table-sm">
+                    <thead class="thead-light">
+                        <tr>
+                            <th>Id</th>
+                            <th>Nombre</th>
+                            <th>Segundo nombre</th>
+                            <th>Apellido Paterno</th>
+                            <th>Apellido Materno</th>
+                            <th>CURP</th>
+                            <th>Teléfono</th>
+                            <th>Sexo</th>
+                            <th>Fecha de nacimiento</th>
+                            <th>No. Trabajador</th>
+                            <th>Email</th>
+                            <th>Estatus</th>
+                            <th>Eliminar</th>
+                            <th>Actualizar</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr *ngFor="let catedraticos of listaCatedratico">
+                            <td>{{catedraticos.idCatedratico}}</td>
+                            <td>{{catedraticos.nombre}}</td>
+                            <td>{{catedraticos.nombre2}}</td>
+                            <td>{{catedraticos.apellido}}</td>
+                            <td>{{catedraticos.apellido2}}</td>
+                            <td>{{catedraticos.curp}}</td>
+                            <td>{{catedraticos.telefono}}</td>
+                            <td>{{catedraticos.sexo}}</td>
+                            <td>{{catedraticos.fechaNacimiento}}</td>
+                            <td>{{catedraticos.numeroTrabajador}}</td>
+                            <td>{{catedraticos.emailCatedratico}}</td>
+                            <td>{{catedraticos.estatus}}</td>
+                            <td> <button (click)="deleteCatedraticos(catedraticos.idCatedratico)" class="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                Eliminar
+                              </button></td>
+                              <td> <button class="bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
+                                Actualizar
+                              </button></td>
+                        </tr>
+                    </tbody>
+                </table>
+                      <div class="mb-3">
+                      <label for="exampleInputEmail1" class="form-label">Nombre </label>
+                      <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                    </div>
+                    <div class="mb-3">
+                      <label for="exampleInputPassword1" class="form-label">Segundo nombre</label>
+                      <input type="password" class="form-control" id="catedraticos">
+                    </div>
+                    <div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label"> Apellido Paterno</label>
+                        <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Apellido Materno</label>
+                        <input type="password" class="form-control" id="catedraticos">
+                      </div><div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">CURP</label>
+                        <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">telefono</label>
+                        <input type="password" class="form-control" id="catedraticos">
+                      </div><div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">sexo</label>
+                        <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">fecha DE Nacimiento</label>
+                        <input type="password" class="form-control" id="catedraticos">
+                      </div><div class="mb-3">
+                        <label for="exampleInputEmail1" class="form-label">numero de Trabajador</label>
+                        <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                      </div>
+                      <div class="mb-3">
+                        <label for="exampleInputPassword1" class="form-label">Email</label>
+                        <input type="password" class="form-control" id="catedraticos">
+                      </div>
+                    <button type="submit" class="btn btn-primary text-dark">Submit</button>
+                 
+                
+            </div>
+        </div>
+    </div>
+
 </div>
+
