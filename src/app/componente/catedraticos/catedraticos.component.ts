@@ -39,11 +39,13 @@ export class CatedraticosComponent implements OnInit{
   }
 
   deleteCatedraticos(id_Catedratico: Number){
-    //console.log('-------------------->>>')
-    alert(`eliminarCatedraticos/${id_Catedratico}`)
-    this.service.deleteCatedraticos(id_Catedratico);
+    
+    this.service.deleteCatedraticos(id_Catedratico)
+    .subscribe(() => {
+      this.getCatedraticos();
+    });
     console.log('Registro eliminado')
-    //this.ngOnInit();
+   
   }
 }
 
