@@ -19,19 +19,19 @@ export class AlumnosService {
   }
 
   createAlumno(alumno: object): Observable<object>{
-    return this.http.delete(`${this.baseUrl1}`+ 'crearAlumno', alumno);
+    return this.http.post(`${this.baseUrl1}`+ 'crearAlumno', alumno);
   }
 
   deleteAlumno(id_alumnoAux: Number): Observable<any>{
     return this.http.delete(`${this.baseUrl1}eliminarAlumno/${id_alumnoAux}`, {responseType: 'text'});
   }
 
-  getAlumno(id: number): Observable<Object>{
+  getAlumno(id: Number): Observable<Object>{
     return this.http.get(`${this.baseUrl1}/obtenerAlumnos/${id}`);
   }
 
-  updateAlumno(id: number, value: any): Observable<Object>{
-    return this.http.post(`${this.baseUrl1}/editarAlumnos/${id}`, value);
+  updateAlumno(id: Number, value: any): Observable<Object>{
+    return this.http.put(`${this.baseUrl1}editarAlumnos/${id}`, value);
   }
 
 

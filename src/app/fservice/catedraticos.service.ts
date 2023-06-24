@@ -31,10 +31,10 @@ export class CatedraticoService {
         return this.http.delete(`${this.baseUrl}eliminarCatedraticos/${id_Catedratico}`, { responseType: 'text' });  
       
     }
-    getCatedraticosId(id:number):Observable<object>{
+    getCatedraticosId(id:Number):Observable<object>{
       return this.http.get(`${this.baseUrl}/obtenerCatedratico/${id}`)
     }
-    upateCatedraticosId(id:number, value: any):Observable<object>{
+    upateCatedraticosId(id:Number, value: any):Observable<object>{
       return this.http.get(`${this.baseUrl}/actualizarCatedraticos/${id}`, value);
     }
 }
