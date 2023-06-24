@@ -9,7 +9,7 @@ export class Alumnos {
     apellido : String = ""
     apellido2 : String = ""
     //Tratar de cambiar a Char
-    sexo: String = ""
+    sexo: string = ""
     curp: String = ""
     matricula: String=""
     telefono: String = ""
