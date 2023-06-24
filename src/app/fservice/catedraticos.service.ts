@@ -1,8 +1,8 @@
 /**
- * Autores: Carlos Aurelio Alcantara Perez, Baldomero Sainos Hernandez
+ * Autores: Carlos Aurelio Alcantara Perez, Baldomero Sainos Hernández
  * Fecha de creacion: 14/06/23
  * Fecha de modificacion: 15/06/23
- * Comentarios: Este es el service de catedratico contendra el crud de catedratico
+ * Comentarios: Este es el service de catedratico contendra el crud de catedrático
  */
 import { HttpClient } from '@angular/common/http';
 import { Injectable } from '@angular/core';
@@ -13,20 +13,20 @@ import { Observable } from 'rxjs';
 })
 export class CatedraticoService {
 
-  //Variable privada para enlazar el back con el from
+  //Variable privada para enlazar el back con el from.
   private baseUrl = 'http://localhost:8080/unsis/';
-  //pasar el httpclient como parametro en el constructor
+  //Pasar el httpclient como parametro en el constructor.
   constructor(private http: HttpClient) { }
-  //metodos que se enlazan con el back 
+  //Métodos que se enlazan con el back.
   /**
-   * Método para obtener un catedratico 
+   * Método para obtener un catedrático.
    * @returns 
    */
   getCatedraticos(): Observable<any> {
     return this.http.get(`${this.baseUrl}` + 'listarTodosCatedraticos');
   }
   /**
-   * Método para crear un catedratico  
+   * Método para crear un catedrático. 
    * @param catedratico 
    * @returns 
    */
@@ -34,7 +34,7 @@ export class CatedraticoService {
     return this.http.post(`${this.baseUrl}` + 'crearCatedraticos', catedratico);
   }
   /**
-   * Borrar un catedratico por su id
+   * Borrar un catedrático por su id.
    * @param id_Catedratico 
    * @returns 
    */
@@ -43,7 +43,7 @@ export class CatedraticoService {
 
   }
   /**
-   * Obtener Catedraticos por su id
+   * Obtener Catedráticos por su id.
    * @param id 
    * @returns 
    */
@@ -51,7 +51,7 @@ export class CatedraticoService {
     return this.http.get(`${this.baseUrl}/obtenerCatedratico/${id}`)
   }
   /**
-   * Actualiza el catedratico y regresa ese objeto
+   * Actualizar un catedrático y retornar el objeto.
    * @param id 
    * @param value 
    * @returns 

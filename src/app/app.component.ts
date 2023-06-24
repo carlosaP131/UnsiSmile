@@ -1,7 +1,7 @@
 /**
  * Autores: Carlos Aurelio Alcantara Perez
- * Fecha de modificacion: 15/06/23
- * Comentarios: Componentes de la paguina principal
+ * Fecha de modificación: 15/06/23
+ * Comentarios: Componentes de la pagina principal
  */
 import { Component } from '@angular/core';
 
