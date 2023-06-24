@@ -10,7 +10,7 @@ import { AlumnosService } from 'src/app/fservice/alumnos.service';
 export class AlumnosComponent implements OnInit {
 
   listaALumnos: Alumnos[] =[]
-
+  alumnos = new Alumnos()
   
   constructor(private service: AlumnosService){}
 
@@ -33,9 +33,22 @@ export class AlumnosComponent implements OnInit {
 
   delete(id_alumnoAux: Number){
     console.log('-------------------->>>')
-    this.service.deleteAlumno(id_alumnoAux);
-    this.getAllAlumno();
+    this.service.deleteAlumno(id_alumnoAux)
+    .subscribe(() => {
+      this.getAllAlumno()
+
+    });
   }
+
+    create(): void{
+      this.service.createAlumno(this.alumnos).subscribe({
+       next: (res) => {
+       },
+       error:(e) => console.error(e)
+      });
+    }
+
+
   
 
 }
