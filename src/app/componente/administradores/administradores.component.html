@@ -1,43 +1,156 @@
 <div class="container-fluid">
-    <div class="row">
-      <div class="col-sm-2" style="background-color:rgb(101, 209, 255);"></div>
-      <div class="col-sm-10" style="background-color:rgb(255, 255, 255);"><div class="card-body">
-        <div class="panel-body">
-            <table class="table table-hover table-sm">
-                <thead class="thead-light">
-                    <tr>
-                        <th>Nombre</th>
-                        <th>Segundo Nombre</th>
-                        <th>Apellido Paterno</th>
-                        <th>Apellido Materno</th>
-                        <th>Curp</th>
-                        <th>Telefono</th>
-                        <th>Numero de trabajador</th>
-                        <th>Fecha de nacimiento</th>
-                        <th>Sexo</th>
-                        <th>Email</th>
-                </thead>
-                <tbody>
-                    <tr *ngFor="let registro of listarTodosAdministradores">
-                        <td>{{registro.nombre1}}</td>
-                        <td>{{registro.nombre2}}</td>
-                        <td>{{registro.apellido1}}</td>
-                        <td>{{registro.apellido2}}</td>
-                        <td>{{registro.curp}}</td>
-                        <td>{{registro.telefono}}</td>
-                        <td>{{registro.numeroTrabajador}}</td>
-                        <td>{{registro.fechaNacimiento}}</td>
-                        <td>{{registro.sexo}}</td>                  
-                        <td>{{registro.emailAdmin}}</td>
-                        <td>
-                            <button (click)="delete(registro.idAdministrador)">Eliminar</button>
-                            <button>Actualizar</button>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
+  <div class="row">
+    <div class="col-sm-2" style="background-color:rgb(101, 209, 255);"></div>
+    <div class="col-sm-10" style="background-color:rgb(255, 255, 255);">
+
+      <form id="formulario_agregar_administrador">
+        <div class="form-group">
+            <label for="primer-nombre">Primer nombre</label>
+            <!--<input type="text" name="primerNombre"class="form-control" placeholder="Primer nombre" id="primer-nombre" required [(ngModel)]="administrador.nombre1">-->
         </div>
-    </div>
-    </div>
+        <div class="form-group">
+            <label for="segundo-nombre">Segundo nombre</label>
+            <input type="text" name="segundoNombre" class="form-control" placeholder="Segundo nombre" id="segundo-nombre">
+        </div>
+        <div class="form-group">
+            <label for="apellido-paterno">Apellido paterno</label>
+            <input type="text" name="apellidoPaterno"class="form-control" placeholder="Apellido paterno" id="apellido-paterno">
+        </div>
+        <div class="form-group">
+            <label for="apellido-materno">Apellido materno</label>
+            <input type="text" name="apellidoMaterno"class="form-control" placeholder="Apellido materno" id="apellido-materno">
+        </div>
+        <div class="form-group">
+            <label for="curp">CURP</label>
+            <input type="text" name="curp" class="form-control" placeholder="CURP" id="curp">
+        </div>
+        <div class="form-group">
+            <label for="telefono">Teléfono</label>
+            <input type="text" name="telefono" class="form-control" placeholder="Teléfono" id="telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="matricula">Numero trabajador</label>
+            <input type="text"  name="numeroTrabajador"class="form-control" placeholder="Numero trabajador" id="matricula">
+        </div>
+
+        <div class="form-group">
+            <label for="sexo">Fecha de nacimiento</label>
+            <input type="date" name="fecha" class="form-control" id="fecha">
+        </div>
+
+
+        <div class="form-group">
+            <label for="sexo">Sexo</label>
+            <select id="sexo" name="sexo" class="select-custom">
+                <option value="">--</option>
+                <option value="hombre">Hombre</option>
+                <option value="mujer">Mujer</option>
+            </select>
+        </div>
+
+
+
+
+
+
+        <div class="form-group">
+            <label for="email">Email</label>
+            <input type="email" name="email"class="form-control" placeholder="Email" id="email">
+        </div>
+
+        <button type="submit" class="btn btn-primary" >Guardar</button>
+    </form>
+      <!-- <div>
+        <form>
+          <div class="mb-3">
+            <label for="" class="form-label">Primer Nombre</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Segundo Nombre</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Apellido Paterno</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Apellido Materno</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">CURP</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Telefono</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Numero de trabajador</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Fecha de Nacimiento</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Sexo</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <div class="mb-3">
+            <label for="" class="form-label">Email</label>
+            <input type="" class="form-control" id="" aria-describedby="">
+          </div>
+          <button type="submit" class="btn btn-primary">Crear</button>
+        </form>
+      </div> -->
+
+
+
+      <div class="card-body">
+        <div class="panel-body">
+          <table class="table table-hover table-sm">
+            <thead class="thead-light">
+              <tr>
+                <th>Nombre</th>
+                <th>Segundo Nombre</th>
+                <th>Apellido Paterno</th>
+                <th>Apellido Materno</th>
+                <th>Curp</th>
+                <th>Telefono</th>
+                <th>Numero de trabajador</th>
+                <th>Fecha de nacimiento</th>
+                <th>Sexo</th>
+                <th>Email</th>
+            </thead>
+            <tbody>
+              <tr *ngFor="let registro of listarTodosAdministradores">
+                <td>{{registro.nombre1}}</td>
+                <td>{{registro.nombre2}}</td>
+                <td>{{registro.apellido1}}</td>
+                <td>{{registro.apellido2}}</td>
+                <td>{{registro.curp}}</td>
+                <td>{{registro.telefono}}</td>
+                <td>{{registro.numeroTrabajador}}</td>
+                <td>{{registro.fechaNacimiento}}</td>
+                <td>{{registro.sexo}}</td>
+                <td>{{registro.emailAdmin}}</td>
+                <td>
+                  <button (click)="delete(registro.idAdministrador)">Eliminar</button>
+                  <button>Actualizar</button>
+                </td>
+              </tr>
+            </tbody>
+          </table>
+
+        </div>
+
+
+      </div>
+
+
     </div>
   </div>
+</div>

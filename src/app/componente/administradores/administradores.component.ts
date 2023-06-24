@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Administradores } from 'src/app/clases/adminstradores';
 import { AdministradoresService } from 'src/app/fservice/administradores.service';
 
+
 @Component({
   selector: 'app-administradores',
   templateUrl: './administradores.component.html',
@@ -9,6 +10,7 @@ import { AdministradoresService } from 'src/app/fservice/administradores.service
 })
 export class AdministradoresComponent implements OnInit{
   listarTodosAdministradores: Administradores[] = []
+  administrador = new Administradores();
 
   constructor(private service: AdministradoresService){}
 
@@ -36,6 +38,16 @@ export class AdministradoresComponent implements OnInit{
         this.getAdministradores();
       });
   }
+
+  /*Método para crear*/
+  create(administrador: object) {
+    console.log('creando...-------------------->>>');
+    this.service.createAdministrador(administrador)
+      .subscribe(() => {
+        this.getAdministradores();
+      });
+  }
+  
 
 }
 
