@@ -1,4 +1,9 @@
-
+/**
+ *Autores:Gonzalez Cruz Getzemani Alejandro 
+ *        Jesus Hernandez Vite 
+ *Fecha de creación:19 de junio del 2023
+ *Fecha de Modificación:24 de junio 2023 
+ */
 export class Alumnos {
 
     //si es necesario utilizar paciente alumno
@@ -8,7 +13,6 @@ export class Alumnos {
     nombre2: String = ""
     apellido : String = ""
     apellido2 : String = ""
-    //Tratar de cambiar a Char
     sexo: string = ""
     curp: String = ""
     matricula: String=""
