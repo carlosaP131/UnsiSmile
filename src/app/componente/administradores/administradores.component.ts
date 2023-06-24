@@ -9,6 +9,8 @@ import { Administradores } from 'src/app/clases/adminstradores';
 import { AdministradoresService } from 'src/app/fservice/administradores.service';
 
 
+
+
 @Component({
   selector: 'app-administradores',
   templateUrl: './administradores.component.html',
@@ -18,6 +20,8 @@ export class AdministradoresComponent implements OnInit {
   listarTodosAdministradores: Administradores[] = []
   administrador = new Administradores();
   listaSexos: string[] = ["H", "M"];
+
+
   /**
      * Constructor del componente AdministradoresComponent.
      * @param service Objeto del servicio AdministradoresService utilizado para realizar operaciones CRUD.

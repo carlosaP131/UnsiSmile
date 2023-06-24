@@ -1,63 +1,60 @@
 
+    .container-fluid {
+        padding: 0;
+      }
+      
+      .row {
+        margin-right: 0;
+        margin-left: 0;
+      }
+      
+      .sidebar {
+        background-color: rgb(25, 97, 128);
+        height: 100vh;
+        padding: 20px;
+      }
+      .span{
+        color: aliceblue;
+      }
 
-.table {
-    width: 100%;
-    max-width: 100%;
-    margin-bottom: 1rem;
-    background-color: transparent;
-    }
-    
-    .table th,
-    .table td {
-    padding: 0.75rem;
-    vertical-align: top;
-    border-top: 1px solid #000000;
-    }
-    
-    .table thead th {
-    vertical-align: bottom;
-    border-bottom: 2px solid #030303;
-    }
-    
-    .table tbody+tbody {
-    border-top: 2px solid #000000;
-    }
-    
-    .table-sm th,
-    .table-sm td {
-    padding: 0.3rem;
-    }
-    
-    .table-bordered {
-    border: 1px solid #000000;
-    }
-    
-    .table-bordered th,
-    .table-bordered td {
-    border: 1px solid #ffffff;
-    }
-    
-    .table-bordered thead th,
-    .table-bordered thead td {
-    border-bottom-width: 2px;
-    }
-    
-    .thead-light th {
-    background-color: #c0c1c2;
-    }
-    
-    .table-hover tbody tr:hover {
-    background-color: rgba(255, 255, 255, 0.075);
-    }
-    
-    .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
-    }
-    
-    .col-2 {
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
-    }
+      
+      
+      .main-content {
+        background-color: rgb(255, 255, 255);
+        padding: 20px;
+      }
+      
+      .dashboard-form {
+        margin-bottom: 20px;
+      }
+      
+      .table {
+        margin-bottom: 0;
+      }
+      
+      .table th,
+      .table td {
+        vertical-align: middle;
+      }
+      
+      .card-body {
+        padding-top: 0;
+      }
+      
+
+      .oculto {
+        display: none;
+      }
+      
+      .cardi {
+        display: none;
+        width: 300px;
+        padding: 20px;
+        background-color: #f2f2f2;
+        border-radius: 5px;
+        box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+      }
+  
+      .show {
+        display: block;
+      }
