@@ -12,6 +12,7 @@ import { Observable } from 'rxjs';
   providedIn: 'root'
 })
 export class CatedraticoService {
+
   //Variable privada para enlazar el back con el from
   private baseUrl = 'http://localhost:8080/unsis/';
   //pasar el httpclient como parametro en el constructor
@@ -59,4 +60,5 @@ export class CatedraticoService {
 
     return this.http.put(`${this.baseUrl}actualizarCatedraticos/${id}`, value);
   }
+
 }

@@ -1,3 +1,5 @@
+
+
 <div class="row">
     <div class="col-2"></div>
     <div class="col-10">
@@ -38,27 +40,75 @@
                             <td>
                                 <button (click)="delete(alumnos.idAlumno)">
                                     Eliminar</button>
-                                <button>Actualizar</button>
+                                <button (click)="updateAlumno(alumnos)">Actualizar</button>
                             </td>
                         </tr>
                     </tbody>
                 </table>
+            </div>
+            <div>
+              
+                    <div class="form-group">
+                        <label for="primer-nombre">Primer nombre</label>
+                        <input type="text" class="form-control" placeholder="Primer nombre" id="nombre" required [(ngModel)]="alumnos.nombre">
+                    </div>
+                    <div class="form-group">
+                        <label for="segundo-nombre">Segundo nombre</label>
+                        <input type="text" class="form-control" placeholder="Segundo nombre" id="nombre2" required [(ngModel)]="alumnos.nombre2">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido-paterno">Apellido paterno</label>
+                        <input type="text" class="form-control" placeholder="Apellido paterno" id="apellido" required [(ngModel)]="alumnos.apellido">
+                    </div>
+                    <div class="form-group">
+                        <label for="apellido-materno">Apellido materno</label>
+                        <input type="text" class="form-control" placeholder="Apellido materno" id="apellido2" required [(ngModel)]="alumnos.apellido2">
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="sexo">Sexo:</label>
+                        <select id="sexo" class="select-custom" [(ngModel)]="alumnos.sexo">
+                            <option [value]="item" *ngFor="let item of listaSexos">{{item}}</option>
+                        </select>
+                    </div>
+    
+                    <div class="form-group">
+                        <label for="curp">CURP</label>
+                        <input type="text" class="form-control" placeholder="CURP" id="curp" required [(ngModel)]="alumnos.curp">
+                    </div>
 
+                    <div class="form-group">
+                        <label for="semestre">Semestre</label>
+                        <select id="Semestre1" class="select-custom">
+                            <option [value]="item" *ngFor="let item of listaSemestres">{{item}}</option>
+    
+                        </select>
+                    </div>
+
+                    <div class="form-group">
+                        <label for="semestre">Grupo</label>
+                        <select id="Grupo1" class="select-custom">
+                            <option [value]="item" *ngFor="let item of listaGrupos">{{item}}</option>
+                        </select>
+                    </div>
+                    <div class="form-group">
+                        <label for="matricula">Matricula</label>
+                        <input type="text" class="form-control" placeholder="Matricula" id="matricula" required [(ngModel)]="alumnos.matricula">
+                    </div>
+                    <div class="form-group">
+                        <label for="telefono">Teléfono</label>
+                        <input type="text" class="form-control" placeholder="Teléfono" id="telefono" required [(ngModel)]="alumnos.telefono">
+                    </div>
+                    <div class="form-group">
+                        <label for="email">Email</label>
+                        <input type="text" class="form-control" placeholder="Email" id="email" required [(ngModel)]="alumnos.emailAlumno">
+                    </div>
+                    <button (click)="create()" class="btn btn-primary">Guardar</button>
+                    <button (click)="update2()" class="btn btn-primary">update</button>
+             
             </div>
-            <div class="mb-3">
-                <label for="exampleInputEmail1" class="form-label">Email address</label>
-                <input type="email" class="form-control" id="nombre" aria-describedby="emailHelp">
-                <div id="emailHelp" class="form-text">We'll never share your email with anyone else.</div>
-            </div>
-            <div class="mb-3">
-                <label for="exampleInputPassword1" class="form-label">Password</label>
-                <input type="password" class="form-control" id="nombre2">
-            </div>
-            <div class="mb-3 form-check">
-                <input type="checkbox" class="form-check-input" id="apellido">
-                <label class="form-check-label" for="exampleCheck1">Check me out</label>
-            </div>
-            <button type="submit" class="btn btn-primary">Submit</button>
-            </div>
+            
         </div>
     </div>
+
+   
