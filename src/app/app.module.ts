@@ -10,6 +10,7 @@ import { CatedraticosComponent } from './componente/catedraticos/catedraticos.co
 import { AlumnosComponent } from './componente/alumnos/alumnos.component';
 import { AdministradoresComponent } from './componente/administradores/administradores.component';
 import { HomeComponent } from './componente/home/home.component';
+import { FormsModule } from '@angular/forms';
 
 @NgModule({
   declarations: [
@@ -22,7 +23,8 @@ import { HomeComponent } from './componente/home/home.component';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    HttpClientModule
+    HttpClientModule,
+    FormsModule
   ],
   providers: [],
   bootstrap: [AppComponent]

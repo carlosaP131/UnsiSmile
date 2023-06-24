@@ -52,7 +52,7 @@
                 </table>
                       <div class="mb-3">
                       <label for="exampleInputEmail1" class="form-label">Nombre </label>
-                      <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                      <input type="text" class="form-control" id="catedraticos" required [(ngModel)]="catedratico.nombre"  aria-describedby="emailHelp" /> 
                     </div>
                     <div class="mb-3">
                       <label for="exampleInputPassword1" class="form-label">Segundo nombre</label>
@@ -75,9 +75,10 @@
                       </div><div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">sexo</label>
                         <input type="email" class="form-control" id="catedraticos" aria-describedby="emailHelp">
+                        
                       </div>
                       <div class="mb-3">
-                        <label for="exampleInputPassword1" class="form-label">fecha DE Nacimiento</label>
+                        <label for="exampleInputPassword1" class="form-label">Fecha de Nacimiento</label>
                         <input type="password" class="form-control" id="catedraticos">
                       </div><div class="mb-3">
                         <label for="exampleInputEmail1" class="form-label">numero de Trabajador</label>
