@@ -15,14 +15,14 @@
                         <tr>
                             <!-- Se definen las columnas de la tabla -->
                             <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Nombre2</th>
-                            <th>Apellido</th>
-                            <th>Apellido2</th>
+                            <th>Primer nombre</th>
+                            <th>Segundo nombre</th>
+                            <th>Primer apellido</th>
+                            <th>Segundo apellido</th>
                             <th>sexo</th>
                             <th>CURP</th>
-                            <th>Matricula</th>
-                            <th>Telefono</th>
+                            <th>Matrícula</th>
+                            <th>Teléfono</th>
                             <th>Email</th>
                             <th>Status</th>
                             <th>Eliminar Actualizar</th>
@@ -108,7 +108,7 @@
                         </div>
                         <div class="form-group">
                             <label for="matricula">Matricula</label>
-                            <input type="text" class="form-control" placeholder="Matricula" id="matricula" required
+                            <input type="text" class="form-control" placeholder="Matrícula" id="matricula" required
                                 [(ngModel)]="alumnos.matricula">
                         </div>
                         <div class="form-group">
@@ -122,8 +122,9 @@
                                 [(ngModel)]="alumnos.emailAlumno">
                         </div>
                         <!--Botones para guardar y actualizar-->
-                        <button (click)="create()" class="btn btn-primary">Guardar</button>
-                        <button (click)="update2()" class="btn btn-primary">update</button>
+                        <button (click)="create()" class="btn btn-primary" >Guardar</button>
+
+                        <button (click)="update2()" class="btn btn-primary">Actualizar</button>
                     </div>
                 </div>
 
