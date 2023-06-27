@@ -7,125 +7,125 @@
  */
 
  .accordion {
-    border: 1px solid #ccc;
-    border-radius: 4px;
-    margin-bottom: 10px;
-  }
-  
-  .accordion-header {
-    display: block;
-    padding: 10px;
-    background-color: #f5f5f5;
-    cursor: pointer;
-  }
-  
-  .accordion-content {
-    padding: 10px;
-    display: none;
-  }
-  
-  /* Mostrar el contenido del acordeón cuando el checkbox está marcado */
-  input[name="accordion-checkbox"]:checked + .accordion-header + .accordion-content {
-    display: block;
-  }
-  
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.accordion-header {
+  display: block;
+  padding: 10px;
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.accordion-content {
+  padding: 10px;
+  display: none;
+}
+
+/* Mostrar el contenido del acordeón cuando el checkbox está marcado */
+input[name="accordion-checkbox"]:checked + .accordion-header + .accordion-content {
+  display: block;
+}
+
 .card {
-    background-color: #fff;
-    border-radius: 8px;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    overflow: hidden;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  overflow: hidden;
 }
 
 .card-body {
-    padding: 20px;
+  padding: 20px;
 }
 
 .table {
-    width: 100%;
-    margin-bottom: 0;
-    color: #333;
-    border-collapse: collapse;
+  width: 100%;
+  margin-bottom: 0;
+  color: #333;
+  border-collapse: collapse;
 }
 
 .table th,
 .table td {
-    padding: 12px;
-    text-align: center;
-    vertical-align: middle;
-    border-top: 1px solid #dee2e6;
+  padding: 12px;
+  text-align: center;
+  vertical-align: middle;
+  border-top: 1px solid #dee2e6;
 }
 
 .table thead th {
-    font-weight: bold;
-    background-color: #343a40;
-    color: #fff;
-    border-color: #343a40;
+  font-weight: bold;
+  background-color: #343a40;
+  color: #fff;
+  border-color: #343a40;
 }
 
 .table tbody tr:nth-of-type(even) {
-    background-color: #f8f9fa;
+  background-color: #f8f9fa;
 }
 
 .table-bordered th,
 .table-bordered td {
-    border: 1px solid #dee2e6;
+  border: 1px solid #dee2e6;
 }
 
 .thead-dark th {
-    background-color: #343a40;
-    color: #fff;
-    border-color: #343a40;
+  background-color: #343a40;
+  color: #fff;
+  border-color: #343a40;
 }
 
 .row {
-    display: flex;
-    flex-wrap: wrap;
-    margin-right: -15px;
-    margin-left: -15px;
+  display: flex;
+  flex-wrap: wrap;
+  margin-right: -15px;
+  margin-left: -15px;
 }
 
 .col-2 {
-    flex: 0 0 16.666667%;
-    max-width: 16.666667%;
+  flex: 0 0 16.666667%;
+  max-width: 16.666667%;
 }
 
 .col-10 {
-    flex: 0 0 83.333333%;
-    max-width: 83.333333%;
+  flex: 0 0 83.333333%;
+  max-width: 83.333333%;
 }
 
 .form-group {
-    margin-bottom: 15px;
-  }
-  
-  label {
-    display: block;
-    font-weight: bold;
-  }
-  
-  .btn {
-    display: inline-block;
-    padding: 8px 12px;
-    font-size: 14px;
-    font-weight: bold;
-    text-align: center;
-    text-decoration: none;
-    cursor: pointer;
-    border: none;
-    border-radius: 4px;
-    background-color: #007bff;
-    color: #fff;
-  }
-  
-  .btn-primary {
-    background-color: #007bff;
-  }
-  
-  .btn-primary:hover {
-    background-color: #0056b3;
-  }
-  
-  .btn-primary:active {
-    background-color: #004799;
-  }
-  
+  margin-bottom: 15px;
+}
+
+label {
+  display: block;
+  font-weight: bold;
+}
+
+
+.btn {
+  display: inline-block;
+  padding: 8px 12px;
+  font-size: 14px;
+  font-weight: bold;
+  text-align: center;
+  text-decoration: none;
+  cursor: pointer;
+  border: none;
+  border-radius: 4px;
+  background-color: #030303;
+  color: #fff;
+}
+
+.btn-primary {
+  background-color: #007bff;
+}
+
+.btn-primary:hover {
+  background-color: #0056b3;
+}
+
+.btn-primary:active {
+  background-color: #004799;
+}
