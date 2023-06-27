@@ -1,7 +1,8 @@
 /**
- * Autores: Carlos Aurelio Alcantara Perez, Baldomero Sainos Hernández
+ * Autores:Carlos Aurelio Alcantara Perez
+ *         Baldomero Sainos Hernández
  * Fecha de creacion: 14/06/23
- * Fecha de modificacion: 15/06/23
+ * Fecha de modificacion: 26/06/23
  * Comentarios: Este es el service de catedratico contendra el crud de catedrático
  */
 import { HttpClient } from '@angular/common/http';
