@@ -57,24 +57,25 @@
             </tr>
           </tbody>
         </table>
+
         <!--=======================================Termina la tabla ============================================-->
-        <!--=======================================Comienza a especificarse los campos del formulario ============================================-->
+        <!-- A continuación, Comienza a especificarse los campos del formulario para el catedrático -->
         <div class="accordion">
           <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
           <label class="accordion-header" for="accordion-1">
             Mostrar formulario
           </label>
           <div class="accordion-content">
-            <div class="mb-1">
+
+            <div class="form-group">
               <label for="exampleInputEmail1">Primer nombre </label>
               <input type="text" class="form-control" placeholder="Primer nombre" id="catedraticos" required
-                [(ngModel)]="catedratico.nombre" value="a" />
-
+                [(ngModel)]="catedratico.nombre" />                
             </div>
-            <div class="mb-1">
-              <label for="exampleInputEmail1" class="form-label">Segundo nombre</label>
+            <div class="form-group">
+              <label for="segundo-nombre" class="form-label">Segundo nombre</label>
               <input type="text" class="form-control" placeholder="Segundo nombre" required
-                [(ngModel)]="catedratico.nombre2" id="catedraticos" value="a">
+                [(ngModel)]="catedratico.nombre2" id="catedraticos">
             </div>
             <div class="mb-1">
               <label for="exampleInputEmail1" class="form-label"> Apellido Paterno</label>
@@ -114,11 +115,11 @@
             </div>
             <div class="mb-1">
               <label for="exampleInputPassword1" class="form-label">Email</label>
-              <input type="email" class="form-control" [(ngModel)]="catedratico.emailCatedratico" id="catedraticos"
-                value="a@a">
+              <input type="email" class="form-control" placeholder="Email" [(ngModel)]="catedratico.emailCatedratico"
+                id="catedraticos" value="a@a">
             </div>
             <!--Botones para guardar y actualizar-->
-            <button (click)="crearCatedratico()" class="btn btn-primary text-dark">Crear </button>
+            <button (click)="crearCatedratico()" class="btn btn-primary text-dark">Guardar </button>
             <button (click)="upate2Catedraticos()" class="btn btn-primary text-dark">Actualizar </button>
           </div>
         </div>
