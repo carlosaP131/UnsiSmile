@@ -23,7 +23,7 @@ export class AlumnosComponent implements OnInit {
   listaALumnos: Alumnos[] = [] // Lista de alumnos
   alumnos = new Alumnos() // Objeto para almacenar los datos de un alumno nuevo
   listaSexos: string[] = ["M","F"] // Lista de opciones para el campo "sexo"
-  listaSemestres: String[] = ["113", "213", "313"] // Traer lista desde procedure
+  listaSemestres: String[] = ["113", "213", "313"] // Traer lista desde procedure spListarSemestreGrupo()
   listaGrupos: String[] = ["A", "B", "C"] // Lista de opciones para el campo "grupo" 
 
   // Constructor del componente
