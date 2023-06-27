@@ -25,7 +25,9 @@
                             <th>Teléfono</th>
                             <th>Email</th>
                             <th>Status</th>
-                            <th>Eliminar Actualizar</th>
+                            <th>Eliminar</th>
+                            <th>Actualizar</th>
+
                         </tr>
                     </thead>
                     <tbody>
@@ -47,6 +49,8 @@
                                 <!-- Se agregan botones para eliminar y actualizar cada alumno -->
                                 <button (click)="delete(alumnos.idAlumno)">
                                     Eliminar</button>
+                            </td>
+                            <td>
                                 <button (click)="updateAlumno(alumnos)">Actualizar</button>
                             </td>
                         </tr>
@@ -121,8 +125,7 @@
                                 [(ngModel)]="alumnos.emailAlumno">
                         </div>
                         <!--Botones para guardar y actualizar-->
-                        <button (click)="create()" class="btn btn-primary" >Guardar</button>
-
+                        <button (click)="create()" class="btn btn-primary">Guardar</button>
                         <button (click)="update2()" class="btn btn-primary">Actualizar</button>
                     </div>
                 </div>
