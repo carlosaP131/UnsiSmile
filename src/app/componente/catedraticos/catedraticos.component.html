@@ -4,115 +4,128 @@
  Fecha de creacion: 19/06/23
  Fecha de modificacion: 19/06/23
  Comentarios: Atributos del objeto Catedrático -->
- 
+
 
 <div class="row">
-    <div class="col-3">
-    </div>
-    <div class="col-9">
-        <div class="card-body">
-            <div class="panel-body">
+  <div class="col-3">
+  </div>
+  <div class="col-9">
+    <div class="card-body">
+      <div class="panel-body">
 
-                <!--======================================= Agregamos los datos de la tabla ============================================-->
-                <table class="table table-hover table-sm">
-                    <thead class="thead-light">
-                        <tr>
-                            <th>Id</th>
-                            <th>Nombre</th>
-                            <th>Segundo nombre</th>
-                            <th>Apellido Paterno</th>
-                            <th>Apellido Materno</th>
-                            <th>CURP</th>
-                            <th>Teléfono</th>
-                            <th>Sexo</th>
-                            <th>Fecha de nacimiento</th>
-                            <th>No. Trabajador</th>
-                            <th>Email</th>
-                            <th>Estatus</th>
-                            <th>Eliminar</th>
-                            <th>Actualizar</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let catedraticos of listaCatedratico">
-                            <td>{{catedraticos.idCatedratico}}</td>
-                            <td>{{catedraticos.nombre}}</td>
-                            <td>{{catedraticos.nombre2}}</td>
-                            <td>{{catedraticos.apellido}}</td>
-                            <td>{{catedraticos.apellido2}}</td>
-                            <td>{{catedraticos.curp}}</td>
-                            <td>{{catedraticos.telefono}}</td>
-                            <td>{{catedraticos.sexo}}</td>
-                            <td>{{catedraticos.fechaNacimiento}}</td>
-                            <td>{{catedraticos.numeroTrabajador}}</td>
-                            <td>{{catedraticos.emailCatedratico}}</td>
-                            <td>{{catedraticos.estatus}}</td>
-                            <td> <button (click)="deleteCatedraticos(catedraticos.idCatedratico)" class="bg-red-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                                Eliminar
-                              </button></td>
-                              <td> <button (click)="upateCatedraticos(catedraticos)" class="bg-green-500 hover:bg-blue-400 text-white font-bold py-2 px-4 border-b-4 border-blue-700 hover:border-blue-500 rounded">
-                                Actualizar
-                              </button></td>
-                        </tr>
-                    </tbody>
-                </table>
-                <!--=======================================Termina la tabla ============================================-->
-                <!--=======================================Comienza a especificarse los campos del formulario ============================================-->
-                <div class="accordion">
-                  <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
-                  <label class="accordion-header" for="accordion-1">
-                      Mostrar formulario
-                  </label>
-                  <div class="accordion-content">    
-                <div class="mb-1">
-                      <label for="exampleInputEmail1" >Nombre </label>
-                      <input type="text" class="form-control" id="catedraticos" required [(ngModel)]="catedratico.nombre"   value="a" /> 
-                    </div>
-                    <div class="mb-1">
-                      <label for="exampleInputPassword1" class="form-label">Segundo nombre</label>
-                      <input type="text" class="form-control" required [(ngModel)]="catedratico.nombre2" id="catedraticos" value="a">
-                    </div>
-                    <div class="mb-1">
-                        <label for="exampleInputEmail1" class="form-label"> Apellido Paterno</label>
-                        <input type="text" class="form-control" id="catedraticos" [(ngModel)]="catedratico.apellido"  value="a">
-                      </div>
-                      <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Apellido Materno</label>
-                        <input type="text" class="form-control" id="catedraticos" [(ngModel)]="catedratico.apellido2" value="a">
-                      </div><div class="mb-1">
-                        <label for="exampleInputEmail1" class="form-label">CURP</label>
-                        <input type="text" class="form-control" id="catedraticos" [(ngModel)]="catedratico.curp"  value="a">
-                      </div>
-                      <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">telefono</label>
-                        <input type="number" class="form-control" [(ngModel)]="catedratico.telefono" id="catedraticos" value="9511039405">
-                      </div><div class="mb-3">
-                        <label for="exampleInputEmail1" class="form-label">sexo</label>
-                        <select name="sexo" [(ngModel)]="catedratico.sexo">
-                          <option [value]="item" *ngFor="let item of listaSexos">{{item}}</option>
-                          </select>
-                      </div>
-                      <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Fecha de Nacimiento</label>
-                        <input type="date" class="form-control" [(ngModel)]="catedratico.fechaNacimiento" id="catedraticos" value="24/06/2023">
-                      </div><div class="mb-1">
-                        <label for="exampleInputEmail1" class="form-label">numero de Trabajador</label>
-                        <input type="text" class="form-control" id="catedraticos" [(ngModel)]="catedratico.numeroTrabajador"  value="a">
-                      </div>
-                      <div class="mb-1">
-                        <label for="exampleInputPassword1" class="form-label">Email</label>
-                        <input type="email" class="form-control" [(ngModel)]="catedratico.emailCatedratico" id="catedraticos" value="a@a">
-                      </div>
-                    <button  (click)="crearCatedratico()"  class="btn btn-primary text-dark">Crear Catedratico</button>
-                    <button  (click)="upate2Catedraticos()"  class="btn btn-primary text-dark">Actualizar Catedartico</button>
-                  </div>
-                </div>
+        <!--======================================= Agregamos los datos de la tabla ============================================-->
+        <table class="table table-hover table-sm">
+          <thead class="thead-light">
+            <tr>
+              <th>Id</th>
+              <th>Nombre</th>
+              <th>Segundo nombre</th>
+              <th>Apellido Paterno</th>
+              <th>Apellido Materno</th>
+              <th>CURP</th>
+              <th>Teléfono</th>
+              <th>Sexo</th>
+              <th>Fecha de nacimiento</th>
+              <th>No. Trabajador</th>
+              <th>Email</th>
+              <th>Estatus</th>
+              <th>Eliminar</th>
+              <th>Actualizar</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr *ngFor="let catedraticos of listaCatedratico">
+              <td>{{catedraticos.idCatedratico}}</td>
+              <td>{{catedraticos.nombre}}</td>
+              <td>{{catedraticos.nombre2}}</td>
+              <td>{{catedraticos.apellido}}</td>
+              <td>{{catedraticos.apellido2}}</td>
+              <td>{{catedraticos.curp}}</td>
+              <td>{{catedraticos.telefono}}</td>
+              <td>{{catedraticos.sexo}}</td>
+              <td>{{catedraticos.fechaNacimiento}}</td>
+              <td>{{catedraticos.numeroTrabajador}}</td>
+              <td>{{catedraticos.emailCatedratico}}</td>
+              <td>{{catedraticos.estatus}}</td>
+              <td> <button (click)="deleteCatedraticos(catedraticos.idCatedratico)">
+                  Eliminar
+                </button></td>
+              <td> <button (click)="upateCatedraticos(catedraticos)">
+                  Actualizar
+                </button></td>
+
+            </tr>
+          </tbody>
+        </table>
+        <!--=======================================Termina la tabla ============================================-->
+        <!--=======================================Comienza a especificarse los campos del formulario ============================================-->
+        <div class="accordion">
+          <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
+          <label class="accordion-header" for="accordion-1">
+            Mostrar formulario
+          </label>
+          <div class="accordion-content">
+            <div class="mb-1">
+              <label for="exampleInputEmail1">Primer nombre </label>
+              <input type="text" class="form-control" placeholder="Primer nombre" id="catedraticos" required
+                [(ngModel)]="catedratico.nombre" value="a" />
 
             </div>
-                
-                <!--=======================================Termina el formormulario ============================================-->
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label">Segundo nombre</label>
+              <input type="text" class="form-control" placeholder="Segundo nombre" required
+                [(ngModel)]="catedratico.nombre2" id="catedraticos" value="a">
             </div>
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label"> Apellido Paterno</label>
+              <input type="text" class="form-control" placeholder="Apellido Paterno" id="catedraticos"
+                [(ngModel)]="catedratico.apellido" value="a">
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputPassword1" class="form-label">Apellido materno</label>
+              <input type="text" class="form-control" placeholder="Apellido materno" id="catedraticos"
+                [(ngModel)]="catedratico.apellido2" value="a">
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label">CURP</label>
+              <input type="text" class="form-control" placeholder="CURP" id="catedraticos"
+                [(ngModel)]="catedratico.curp" value="a">
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputPassword1" class="form-label">Teléfono</label>
+              <input type="number" class="form-control" placeholder="Teléfono" [(ngModel)]="catedratico.telefono"
+                id="catedraticos" value="9511039405">
+            </div>
+            <div class="mb-3">
+              <label for="exampleInputEmail1" class="form-label">sexo</label>
+              <select name="sexo" [(ngModel)]="catedratico.sexo">
+                <option [value]="item" *ngFor="let item of listaSexos">{{item}}</option>
+              </select>
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputPassword1" class="form-label">Fecha de Nacimiento</label>
+              <input type="date" class="form-control" [(ngModel)]="catedratico.fechaNacimiento" id="catedraticos"
+                value="24/06/2023">
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputEmail1" class="form-label">Número de Trabajador</label>
+              <input type="text" class="form-control" placeholder="Número de Trabajador" id="catedraticos"
+                [(ngModel)]="catedratico.numeroTrabajador" value="a">
+            </div>
+            <div class="mb-1">
+              <label for="exampleInputPassword1" class="form-label">Email</label>
+              <input type="email" class="form-control" [(ngModel)]="catedratico.emailCatedratico" id="catedraticos"
+                value="a@a">
+            </div>
+            <!--Botones para guardar y actualizar-->
+            <button (click)="crearCatedratico()" class="btn btn-primary text-dark">Crear </button>
+            <button (click)="upate2Catedraticos()" class="btn btn-primary text-dark">Actualizar </button>
+          </div>
         </div>
+
+      </div>
+
+      <!--=======================================Termina el formormulario ============================================-->
     </div>
-
-
+  </div>
+</div>
