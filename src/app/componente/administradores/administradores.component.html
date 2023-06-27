@@ -14,10 +14,10 @@
 
             <tr>
               <th>Nombre</th>
-              <th>Segundo Nombre</th>
-              <th>Apellido Paterno</th>
-              <th>Apellido Materno</th>
-              <th>Curp</th>
+              <th>Segundo nombre</th>
+              <th>Apellido paterno</th>
+              <th>Apellido materno</th>
+              <th>CURP</th>
               <th>Teléfono</th>
               <th>Número de trabajador</th>
               <th>Fecha de nacimiento</th>
@@ -59,10 +59,10 @@
 
             <div class="form-group">
               <label for="primer-nombre">Primer nombre</label>
-              <input type="text" name="primerNombre" class="form-control" placeholder="Primer nombre" id="primer-nombre"
-                required [(ngModel)]="administrador.nombre1">
-            </div>
-
+              <input type="text" class="form-control" placeholder="P" id="nombre" required
+                  [(ngModel)]="administrador.nombre1">
+          </div>
+            
             <div class="form-group">
               <label for="segundo-nombre">Segundo nombre</label>
               <input type="text" name="segundoNombre" class="form-control" placeholder="Segundo nombre"
@@ -82,7 +82,7 @@
             </div>
 
             <div class="form-group">
-              <label for="curp">Curp</label>
+              <label for="curp">CURP</label>
               <input type="text" name="curp" class="form-control" placeholder="CURP" id="curp" required
                 [(ngModel)]="administrador.curp">
             </div>
@@ -95,7 +95,7 @@
 
             <div class="form-group">
               <label for="matricula">Número trabajador</label>
-              <input type="number" name="numeroTrabajador" class="form-control" placeholder="Numero trabajador"
+              <input type="number" name="numeroTrabajador" class="form-control" placeholder="Número trabajador"
                 id="matricula" required [(ngModel)]="administrador.numeroTrabajador">
             </div>
 
@@ -114,7 +114,7 @@
 
             <div class="form-group">
               <label for="email">Email</label>
-              <input type="email" name="email" class="form-control" placeholder="Email" id="email" required
+              <input type="text" name="email" class="form-control" placeholder="Email" id="email" required
                 [(ngModel)]="administrador.emailAdmin">
             </div>
             <!--Botones para guardar y actualizar-->
