@@ -13,7 +13,7 @@
                 <table class="table table-hover table-sm">
                     <thead class="thead-light">
                         <tr>
-                        <!-- Se definen las columnas de la tabla -->
+                            <!-- Se definen las columnas de la tabla -->
                             <th>Id</th>
                             <th>Nombre</th>
                             <th>Nombre2</th>
@@ -55,68 +55,80 @@
             </div>
             <div>
                 <!-- A continuación, se muestra un formulario para agregar nuevos alumnos -->
-                <div class="form-group">
-                    <label for="primer-nombre">Primer nombre</label>
-                    <input type="text" class="form-control" placeholder="Primer nombre" id="nombre" required
-                        [(ngModel)]="alumnos.nombre">
-                </div>
-                <div class="form-group">
-                    <label for="segundo-nombre">Segundo nombre</label>
-                    <input type="text" class="form-control" placeholder="Segundo nombre" id="nombre2" required
-                        [(ngModel)]="alumnos.nombre2">
-                </div>
-                <div class="form-group">
-                    <label for="apellido-paterno">Apellido paterno</label>
-                    <input type="text" class="form-control" placeholder="Apellido paterno" id="apellido" required
-                        [(ngModel)]="alumnos.apellido">
-                </div>
-                <div class="form-group">
-                    <label for="apellido-materno">Apellido materno</label>
-                    <input type="text" class="form-control" placeholder="Apellido materno" id="apellido2" required
-                        [(ngModel)]="alumnos.apellido2">
-                </div>
-                <div class="form-group">
-                    <label for="sexo">Sexo:</label>
-                    <select id="sexo" class="select-custom" [(ngModel)]="alumnos.sexo">
-                        <option [value]="item" *ngFor="let item of listaSexos">{{item}}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="curp">CURP</label>
-                    <input type="text" class="form-control" placeholder="CURP" id="curp" required
-                        [(ngModel)]="alumnos.curp">
-                </div>
-                <div class="form-group">
-                    <label for="semestre">Semestre</label>
-                    <select id="Semestre1" class="select-custom">
-                        <option [value]="item" *ngFor="let item of listaSemestres">{{item}}</option>
 
-                    </select>
+                <div class="accordion">
+                    <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
+                    <label class="accordion-header" for="accordion-1">
+                        Mostrar formulario
+                    </label>
+                    <div class="accordion-content">
+
+                        <div class="form-group">
+                            <label for="primer-nombre">Primer nombre</label>
+                            <input type="text" class="form-control" placeholder="Primer nombre" id="nombre" required
+                                [(ngModel)]="alumnos.nombre">
+                        </div>
+                        <div class="form-group">
+                            <label for="segundo-nombre">Segundo nombre</label>
+                            <input type="text" class="form-control" placeholder="Segundo nombre" id="nombre2" required
+                                [(ngModel)]="alumnos.nombre2">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido-paterno">Apellido paterno</label>
+                            <input type="text" class="form-control" placeholder="Apellido paterno" id="apellido"
+                                required [(ngModel)]="alumnos.apellido">
+                        </div>
+                        <div class="form-group">
+                            <label for="apellido-materno">Apellido materno</label>
+                            <input type="text" class="form-control" placeholder="Apellido materno" id="apellido2"
+                                required [(ngModel)]="alumnos.apellido2">
+                        </div>
+                        <div class="form-group">
+                            <label for="sexo">Sexo:</label>
+                            <select id="sexo" class="select-custom" [(ngModel)]="alumnos.sexo">
+                                <option [value]="item" *ngFor="let item of listaSexos">{{item}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="curp">CURP</label>
+                            <input type="text" class="form-control" placeholder="CURP" id="curp" required
+                                [(ngModel)]="alumnos.curp">
+                        </div>
+                        <div class="form-group">
+                            <label for="semestre">Semestre</label>
+                            <select id="Semestre1" class="select-custom">
+                                <option [value]="item" *ngFor="let item of listaSemestres">{{item}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="semestre">Grupo</label>
+                            <select id="Grupo1" class="select-custom">
+                                <option [value]="item" *ngFor="let item of listaGrupos">{{item}}</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="matricula">Matricula</label>
+                            <input type="text" class="form-control" placeholder="Matricula" id="matricula" required
+                                [(ngModel)]="alumnos.matricula">
+                        </div>
+                        <div class="form-group">
+                            <label for="telefono">Teléfono</label>
+                            <input type="text" class="form-control" placeholder="Teléfono" id="telefono" required
+                                [(ngModel)]="alumnos.telefono">
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email</label>
+                            <input type="text" class="form-control" placeholder="Email" id="email" required
+                                [(ngModel)]="alumnos.emailAlumno">
+                        </div>
+                        <!--Botones para guardar y actualizar-->
+                        <button (click)="create()" class="btn btn-primary">Guardar</button>
+                        <button (click)="update2()" class="btn btn-primary">update</button>
+                    </div>
                 </div>
-                <div class="form-group">
-                    <label for="semestre">Grupo</label>
-                    <select id="Grupo1" class="select-custom">
-                        <option [value]="item" *ngFor="let item of listaGrupos">{{item}}</option>
-                    </select>
-                </div>
-                <div class="form-group">
-                    <label for="matricula">Matricula</label>
-                    <input type="text" class="form-control" placeholder="Matricula" id="matricula" required
-                        [(ngModel)]="alumnos.matricula">
-                </div>
-                <div class="form-group">
-                    <label for="telefono">Teléfono</label>
-                    <input type="text" class="form-control" placeholder="Teléfono" id="telefono" required
-                        [(ngModel)]="alumnos.telefono">
-                </div>
-                <div class="form-group">
-                    <label for="email">Email</label>
-                    <input type="text" class="form-control" placeholder="Email" id="email" required
-                        [(ngModel)]="alumnos.emailAlumno">
-                </div>
-                <!--Botones para guardar y actualizar-->
-                <button (click)="create()" class="btn btn-primary">Guardar</button>
-                <button (click)="update2()" class="btn btn-primary">update</button>
+
             </div>
+
+
         </div>
     </div>
