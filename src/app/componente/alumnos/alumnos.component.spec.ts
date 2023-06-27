@@ -1,6 +1,6 @@
 /**
  *Autores:Gonzalez Cruz Getzemani Alejandro 
- *        Jesus Hernandez Vite 
+ *        Jesús Fernando Hernández Vite 
  *Fecha de creación:15 de junio del 2023
  *Fecha de Modificación:24 de junio 2023 
  */
