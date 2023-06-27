@@ -41,7 +41,7 @@ export class AdministradoresService {
    */
 
   deleteAdministrador(id_admin: any): Observable<any> {
-    alert(`${this.baseUrl}eliminarAdministrador/${id_admin}`)
+    
     return this.http.delete(`${this.baseUrl}eliminarAdministrador/${id_admin}`);
   }
 
