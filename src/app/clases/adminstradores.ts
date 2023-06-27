@@ -1,3 +1,9 @@
+/**
+ *Autores:Nancy Obed Martínez Miguel
+ *        Salvador Elionaí Antonio Pérez
+ *Fecha de creación:19 de junio del 2023
+ *Fecha de Modificación:27 de junio 2023        
+ */
 export class Administradores {
     idAdministrador: Number = 0
     nombre1:String = " "
