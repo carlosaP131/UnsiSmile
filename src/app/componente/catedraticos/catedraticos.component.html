@@ -58,7 +58,13 @@
                 </table>
                 <!--=======================================Termina la tabla ============================================-->
                 <!--=======================================Comienza a especificarse los campos del formulario ============================================-->
-                      <div class="mb-1">
+                <div class="accordion">
+                  <input type="checkbox" id="accordion-1" name="accordion-checkbox" hidden>
+                  <label class="accordion-header" for="accordion-1">
+                      Mostrar formulario
+                  </label>
+                  <div class="accordion-content">    
+                <div class="mb-1">
                       <label for="exampleInputEmail1" >Nombre </label>
                       <input type="text" class="form-control" id="catedraticos" required [(ngModel)]="catedratico.nombre"   value="a" /> 
                     </div>
@@ -99,11 +105,14 @@
                       </div>
                     <button  (click)="crearCatedratico()"  class="btn btn-primary text-dark">Crear Catedratico</button>
                     <button  (click)="upate2Catedraticos()"  class="btn btn-primary text-dark">Actualizar Catedartico</button>
-                 
+                  </div>
+                </div>
+
+            </div>
                 
                 <!--=======================================Termina el formormulario ============================================-->
             </div>
         </div>
     </div>
-</div>
+
 
